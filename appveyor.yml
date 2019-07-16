@@ -7,5 +7,5 @@ platform:
   - x64
 
 install:
-  - choco install -y openssl
+  - choco install -y openssl.light
   - nmake -f win32/Makefile.mak
