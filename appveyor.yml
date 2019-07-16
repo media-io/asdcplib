@@ -3,8 +3,9 @@ os:
  - Windows Server 2016
 
 platform:
-  - x86
-  - x64
+ - x86
+ - x64
 
 install:
-  - nmake WITH_OPENSSL="C:\OpenSSL-v111-Win64\bin" /F win32/Makefile.mak
+ - '"C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SetEnv.cmd" /x64'
+ - nmake WITH_OPENSSL="C:\OpenSSL-v111-Win64\bin" /F win32/Makefile.mak
