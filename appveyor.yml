@@ -10,3 +10,7 @@ build_script:
  - cd win32
  - '"C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SetEnv.cmd" /x86'
  - nmake WITH_OPENSSL="C:\OpenSSL-v111-Win32" /F Makefile.wmk
+
+artifacts:
+  - path: win32/*.exe
+    name: asdcplib
