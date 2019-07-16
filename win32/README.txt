@@ -35,25 +35,25 @@ variable KM_USE_RANDOM_UUID is set during runtime.
 Open a command prompt in which the VS build tools are available on the command line (e.g., the
 "Visual Studio command prompt"). The nmake invocation follows this form:
 C:\>nmake WITH_OPENSSL=<OpenSSL directory> [WITH_XERCES=<Xerces directory>|
-	WITH_XML_PARSER=<Expat directory>] [ENABLE_RANDOM_UUID=1] /f Makefile.mak
+	WITH_XML_PARSER=<Expat directory>] [ENABLE_RANDOM_UUID=1] /f Makefile.wmk
 
 On our Windows development machine, the invocation with XML parsing by Xerces-C++ is as such:
 C:\Program Files\asdcplib\win32>nmake WITH_OPENSSL="c:\Program Files\openssl-0.9.8j"
-	WITH_XERCES="C:\Program Files\xerces-c_2_8_0-x86-windows-vc_8_0" /f Makefile.mak
+	WITH_XERCES="C:\Program Files\xerces-c_2_8_0-x86-windows-vc_8_0" /f Makefile.wmk
 
 With XML parsing by Expat and random UUID generation enabled:
 C:\Program Files\asdcplib\win32>nmake WITH_OPENSSL="c:\Program Files\openssl-0.9.8j"
-	WITH_XML_PARSER="C:\Program Files\Expat 2.0.1" ENABLE_RANDOM_UUID=1 /f Makefile.mak
+	WITH_XML_PARSER="C:\Program Files\Expat 2.0.1" ENABLE_RANDOM_UUID=1 /f Makefile.wmk
 
 Without XML parsing:
 C:\Program Files\asdcplib\win32>nmake WITH_OPENSSL="c:\Program Files\openssl-0.9.8j"
-	/f Makefile.mak
+	/f Makefile.wmk
 
 Without XML parsing but with the AS-02 library and executables:
 C:\Program Files\asdcplib\win32>nmake WITH_OPENSSL="c:\Program Files\openssl-0.9.8j"
-	USE_AS_02=1 /f Makefile.mak
+	USE_AS_02=1 /f Makefile.wmk
 
-Want a 64-bit build? Change the following line in Makefile.mak:
+Want a 64-bit build? Change the following line in Makefile.wmk:
     LINKFLAGS1 = /NOLOGO /SUBSYSTEM:console /MACHINE:I386 /LIBPATH:. /DEBUG
 to
     LINKFLAGS1 = /NOLOGO /SUBSYSTEM:console /MACHINE:X64 /LIBPATH:. /DEBUG
