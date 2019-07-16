@@ -1,0 +1,11 @@
+os:
+ - Windows Server 2012 R2
+ - Windows Server 2016
+
+platform:
+  - x86
+  - x64
+
+install:
+  - choco install -y openssl
+  - nmake -f win32/Makefile.mak
