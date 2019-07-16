@@ -7,5 +7,4 @@ platform:
   - x64
 
 install:
-  - choco install -y openssl.light
-  - nmake -f win32/Makefile.mak
+  - nmake WITH_OPENSSL="C:\OpenSSL-v111-Win64\bin" /F win32/Makefile.mak
