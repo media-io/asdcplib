@@ -7,8 +7,6 @@ platform:
  - x64
 
 install:
- - dir "C:\OpenSSL-v111-Win64"
- - dir "C:\OpenSSL-v111-Win64\inc32"
  - cd win32
  - '"C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SetEnv.cmd" /x64'
  - nmake WITH_OPENSSL="C:\OpenSSL-v111-Win64" /F Makefile.wmk
