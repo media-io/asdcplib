@@ -8,4 +8,4 @@ platform:
 
 install:
  - '"C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SetEnv.cmd" /x64'
- - nmake WITH_OPENSSL="C:\OpenSSL-v111-Win64\bin" /F win32/Makefile.mak
+ - nmake WITH_OPENSSL="C:\OpenSSL-v111-Win64\bin" /F "win32\Makefile.wmk"
