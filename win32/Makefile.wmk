@@ -76,12 +76,12 @@ LIBFLAGS = $(LIBFLAGS1)
 
 CPPFLAGS = $(CXXFLAGS)
 
-KUMU_OBJS = $(SRC)/KM_fileio.obj \
-   $(SRC)/KM_log.obj \
-   $(SRC)/KM_prng.obj \
-   $(SRC)/KM_util.obj \
-   $(SRC)/KM_xml.obj \
-   $(SRC)/KM_tai.obj
+KUMU_OBJS = $(SRCDIR)/KM_fileio.obj \
+   $(SRCDIR)/KM_log.obj \
+   $(SRCDIR)/KM_prng.obj \
+   $(SRCDIR)/KM_util.obj \
+   $(SRCDIR)/KM_xml.obj \
+   $(SRCDIR)/KM_tai.obj
 
 ASDCP_OBJS = MPEG2_Parser.obj MPEG.obj JP2K_Codestream_Parser.obj \
 	JP2K_Sequence_Parser.obj JP2K.obj PCM_Parser.obj Wav.obj \
