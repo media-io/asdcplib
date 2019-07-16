@@ -116,14 +116,14 @@ clean:
 libkumu.lib : $(KUMU_OBJS)
 !IFDEF WITH_XERCES
 !IFDEF DEBUG
-	$(LIB_EXE) $(LIBFLAGS) /OUT:libkumu.lib $** libeay32.lib xerces-c_2D.lib
+	$(LIB_EXE) $(LIBFLAGS) /OUT:libkumu.lib $** openssl.lib xerces-c_2D.lib
 !ELSE
-	$(LIB_EXE) $(LIBFLAGS) /OUT:libkumu.lib $** libeay32.lib xerces-c_2.lib
+	$(LIB_EXE) $(LIBFLAGS) /OUT:libkumu.lib $** openssl.lib xerces-c_2.lib
 !ENDIF
 !ELSEIFDEF WITH_XML_PARSER
-	$(LIB_EXE) $(LIBFLAGS) /OUT:libkumu.lib $** libeay32.lib libexpatMT.lib
+	$(LIB_EXE) $(LIBFLAGS) /OUT:libkumu.lib $** openssl.lib libexpatMT.lib
 !ELSE
-	$(LIB_EXE) $(LIBFLAGS) /OUT:libkumu.lib $** libeay32.lib
+	$(LIB_EXE) $(LIBFLAGS) /OUT:libkumu.lib $** openssl.lib
 !ENDIF 
 
 libasdcp.lib: libkumu.lib $(ASDCP_OBJS)
@@ -147,7 +147,7 @@ kmrandgen.exe: libkumu.lib kmrandgen.obj
 	$(LINK) $(LINKFLAGS) /OUT:kmrandgen.exe $** Advapi32.lib
 
 kmfilegen.exe: libkumu.lib kmfilegen.obj
-	$(LINK) $(LINKFLAGS) /OUT:kmfilegen.exe $** Advapi32.lib
+	$(LINK) $(LINKFLAGS) /OUT:kmfilegen.exe $** openssl.lib Advapi32.lib
 
 klvwalk.exe: libasdcp.lib klvwalk.obj
 	$(LINK) $(LINKFLAGS) /OUT:klvwalk.exe $** Advapi32.lib
